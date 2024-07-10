@@ -8,13 +8,11 @@ import 'package:real_time_video_calls_app_zegocloud/contacts/contacts.dart';
 import 'package:real_time_video_calls_app_zegocloud/home/home.dart';
 import 'package:real_time_video_calls_app_zegocloud/settings/settings.dart';
 
-final _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
-
 class AppRouter {
   AppRouter();
 
   GoRouter router(AppBloc appBloc) => GoRouter(
-        navigatorKey: _rootNavigatorKey,
+        navigatorKey: navigatorKey,
         initialLocation: AppRoutes.contacts.route,
         routes: [
           GoRoute(
@@ -23,7 +21,7 @@ class AppRouter {
             builder: (context, state) => const AuthPage(),
           ),
           StatefulShellRoute.indexedStack(
-            parentNavigatorKey: _rootNavigatorKey,
+            parentNavigatorKey: navigatorKey,
             builder: (context, state, navigationShell) {
               return HomePage(navigationShell: navigationShell);
             },

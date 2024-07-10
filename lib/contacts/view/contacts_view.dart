@@ -2,6 +2,7 @@ import 'package:app_ui/app_ui.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:real_time_video_calls_app_zegocloud/app/app.dart';
+import 'package:real_time_video_calls_app_zegocloud/contacts/contacts.dart';
 import 'package:user_repository/user_repository.dart';
 
 class ContactsView extends StatelessWidget {
@@ -42,6 +43,18 @@ class ContactsView extends StatelessWidget {
                       subtitle: Text(
                         user.email,
                         style: context.bodySmall?.apply(color: AppColors.grey),
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          for (final callType in CallType.values)
+                            SendCallButton(
+                              callType: callType,
+                              userId: user.id,
+                              name: user.name,
+                              canAcceptCalls: user.acceptCalls,
+                            ),
+                        ],
                       ),
                     );
                   },

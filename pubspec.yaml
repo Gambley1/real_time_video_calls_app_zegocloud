@@ -12,6 +12,8 @@ dependencies:
     path: packages/app_ui
   bloc: ^8.1.4
   cupertino_icons: ^1.0.6
+  env:
+    path: packages/env
   equatable: ^2.0.5
   firebase_authentication_client:
     path: packages/firebase_authentication_client
@@ -26,6 +28,8 @@ dependencies:
   shadcn_ui: ^0.5.7
   user_repository:
     path: packages/user_repository
+  zego_uikit_prebuilt_call: ^4.13.1
+  zego_uikit_signaling_plugin: ^2.8.2
 
 dev_dependencies:
   flutter_test:
