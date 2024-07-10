@@ -1,0 +1,36 @@
+name: real_time_video_calls_app_zegocloud
+description: "A new Flutter project."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  animations: ^2.0.11
+  app_ui:
+    path: packages/app_ui
+  bloc: ^8.1.4
+  cupertino_icons: ^1.0.6
+  equatable: ^2.0.5
+  firebase_authentication_client:
+    path: packages/firebase_authentication_client
+  firebase_core: ^3.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  form_fields:
+    path: packages/form_fields
+  go_router: ^14.2.0
+  mocktail: ^1.0.4
+  shadcn_ui: ^0.5.7
+  user_repository:
+    path: packages/user_repository
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  very_good_analysis: ^5.1.0
+
+flutter:
+  uses-material-design: true
