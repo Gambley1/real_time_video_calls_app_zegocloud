@@ -185,8 +185,8 @@ extension on firebase_auth.User {
   AuthenticationUser get toUser {
     return AuthenticationUser(
       id: uid,
-      email: email!,
-      name: displayName!,
+      email: email ?? '',
+      name: displayName ?? '',
     );
   }
 }
